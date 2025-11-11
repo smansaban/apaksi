@@ -1,4 +1,4 @@
-import { fetchFromGAS } from "@/lib/fetchGAS";
+import { fetchFromGAS } from "../lib/fetchGAS";
 
 export const dynamic = "force-dynamic"; // selalu render terbaru pada setiap request
 
@@ -43,17 +43,6 @@ export default async function Page() {
           </pre>
         </>
       )}
-
-      <hr style={{ margin: "24px 0" }} />
-
-      <section>
-        <h3>Cara ganti sumber data (GAS URL)</h3>
-        <ol>
-          <li>Masuk Vercel → Project → <b>Settings → Environment Variables</b>.</li>
-          <li>Ubah nilai <code>GAS_ENDPOINT</code> ke URL terbaru dari Google Apps Script.</li>
-          <li>Lakukan <b>Redeploy</b> (atau push commit baru) agar perubahan aktif.</li>
-        </ol>
-      </section>
     </main>
   );
 }
